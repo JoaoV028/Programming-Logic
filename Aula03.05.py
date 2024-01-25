@@ -1,5 +1,14 @@
 import math
+def radiano (angulo_graus):
+    """Converte um ângulo de graus para radianos."""
 
-angulo = float(input('Digite o angulo:'))
-angulo.radianos = angulo * math.pi / 180
-print (f'O angulo de {angulo} graus é aproximadamente {angulo.radianos:4} em radianos!')
+    return angulo_graus * math.pi / 180
+# Solicita ao usuário que digite o ângulo em graus
+
+angulo_graus = float(input('Digite o ângulo em graus: '))
+# calcula o angulo em radianos usando a funçâo definida anteriormente
+
+angulo_radianos = radiano (angulo_graus)
+
+# Imprime o resultado 
+print(f'O ângulo de {angulo_graus} graus é apriximadamente  {angulo_radianos:.2f} em radianos!')

@@ -8,6 +8,6 @@ def Soma (a,b):
 x = 4
 y = 8
 
-Soma(x,y)
+Soma (x,y)
 print ('O valor de x = ', x )
 print ('O valor de y = ', y)

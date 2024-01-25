@@ -6,7 +6,7 @@ def detector_pesado():
         nome = str(input('Digite o nome: '))
 
         while True:
-            try:              
+            try:            
                 peso = float(input(f'Digite o peso de {nome} Kg: '))
                 break
             except ValueError:

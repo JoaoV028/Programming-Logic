@@ -1,29 +1,22 @@
-L1 = float(input('Digite o primeiro angulo: '))
-L2 = float(input('Digite o segundo angulo: '))
-L3 = float(input('Digite o terceiro angulo: '))
-
-if L1 < (L2 + L3) and L2 < (L1 + L3) and L3 < (L2 + L1):
-    print ('Pode formar um triangulo!')
-    if L1 == L2 and L2 == L3:
-        print('É um triangulo equilatero!')
-    elif L1 != L2 and L2 != L3 and L1 != L3:
-        print('É um triangulo escaleno!')
+def formar_triangulo (l1, l2, l3):
+    """Verifica se é possivel formar um triângulo com os comprimentos dos lados dados."""
+    return l1 < l2 + l3 and l2 < l1 + l3 and l3 < l1 + l2
+def tipo_triangulo (l1, l2 , l3):
+    '''Determina o tipo de triângulo com base nos comprimentos dos lados dados.'''
+    if l1 == l2 == l3:
+        return 'equilátero'
+    elif l1 != l2 != l3 != l1:
+        return 'escaleno'
     else:
-        print('É um triangulo isósceles!')
-else:
-    print ('Não pode formar um triangulo!')
+        return 'isósceles'
 
-if L1 == L2 and L2 == L3:
-    print('Se formar um triangulo, será equilatero!')
-else:
-    print('Se formar um triangulo, não será equilatero!')
+# Solicita ao usuário que digite os  comprimentos dos lados do triângulo
+l1 = float(input('Digite o comprimento do primeiro lado: '))
+l2 = float(input('Digite o comprimento do segundo lado: '))
+l3 = float(input('Digite o comprimento do terceiro lado: '))
 
-if L1 != L2 and L2 != L3 and L1 != L3:
-    print('Se formar um triangulo, será escaleno!')
-else:
-    print('Se formar um triangulo, não será escaleno!')
-
-if (L1 == L2 and L1 != L3) or (L1 == L3 and L1 != L2) or (L2 == L3 and L2 != L1):
-    print('Se formar um triangulo, será isósceles!')
-else:
-    print('Se formar um triangulo, não será isósceles!')
+# Verifica se é possìvel formar um triângulo e determina o tipo
+if formar_triangulo (l1, l2, l3):
+    print('É possível formar um triângulo!')
+    print (f'O triângulo é {tipo_triangulo(l1, l2, l3)}.')
+else: print('Não é possivel formar um triângulo!') 
