@@ -1,8 +1,10 @@
 def formar_triangulo (l1, l2, l3):
     """Verifica se é possivel formar um triângulo com os comprimentos dos lados dados."""
+
     return l1 < l2 + l3 and l2 < l1 + l3 and l3 < l1 + l2
 def tipo_triangulo (l1, l2 , l3):
     '''Determina o tipo de triângulo com base nos comprimentos dos lados dados.'''
+    
     if l1 == l2 == l3:
         return 'equilátero'
     elif l1 != l2 != l3 != l1:
